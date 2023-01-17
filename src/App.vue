@@ -1,13 +1,10 @@
-<script setup>
-// import { RouterLink, RouterView } from "vue-router";
-// import HelloWorld from "./components/HelloWorld.vue";
-</script>
+<script setup></script>
 
 <template>
   <header>
     <nav>
-      <RouterLink to="/todoList">Home</RouterLink>
-      <!-- <RouterLink to="/about">About</RouterLink> -->
+      <RouterLink to="/todoList">투두 리스트</RouterLink><br />
+      <RouterLink to="/studyRoom">스터디 룸</RouterLink>
     </nav>
   </header>
 

@@ -1,13 +1,19 @@
 <template lang="">
   <div>
-    <form @submit="submitTodoHandler">
-      <input type="button" value="+" v-model="newTodo" />
+    <p>할 일을 입력하세요 :</p>
+    <form @submit.prevent="submitTodoHandler(newTodo)">
+      <input type="text" v-model="newTodo" />
     </form>
   </div>
 </template>
+
 <script setup>
 import { ref } from "vue";
+import { useTodoStore } from "../../stores/todo";
 const newTodo = ref("");
-const submitTodoHandler = () => {};
+const store = useTodoStore();
+
+const submitTodoHandler = store.addTodoItem;
 </script>
+
 <style lang=""></style>

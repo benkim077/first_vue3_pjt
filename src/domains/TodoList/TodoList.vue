@@ -4,7 +4,9 @@
   </div>
 </template>
 <script setup>
-import { reactive } from "vue";
-const todos = reactive(["first", "second", "third"]);
+import { useTodoStore } from "../../stores/todo";
+
+const store = useTodoStore();
+const todos = store.todos;
 </script>
 <style lang=""></style>

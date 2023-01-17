@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import TodoListView from "../views/TodoListView.vue";
-// import HomeView from '../views/HomeView.vue'
+import StudyRoomView from "../views/StudyRoomView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,19 +10,11 @@ const router = createRouter({
       name: "todolist",
       component: TodoListView,
     },
-    // {
-    //   path: '/',
-    //   name: 'home',
-    //   component: HomeView
-    // },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // }
+    {
+      path: "/studyRoom",
+      name: "studyRoom",
+      component: StudyRoomView,
+    },
   ],
 });
 
